@@ -4,14 +4,17 @@
 
 ## Lab Architecture
 
-Windows Server 2022
-|
-|
-lab.local Domain
-|
+The lab consists of:
 
-| |
-WIN11 Client File Server  
+- Windows Server 2022
+  - Active Directory Domain Services
+  - DNS
+  - DHCP
+  - File Server
+
+- Windows 11 Client
+  - Domain joined workstation
+  - User access testing
 
 A Windows Server 2022 Active Directory lab environment with centralized authentication,  
 DHCP, DNS, file services, NTFS permissions and Group Policy management.
