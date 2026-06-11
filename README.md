@@ -97,6 +97,36 @@ Screenshot:
 
 ![DNS Records](screenshots/dns_records.png)  
 
+---  
+## File Server Configuration  
+
+Created SMB share:  
+
+\\SRV-DC-01\CompanyData  
+
+Folders:  
+- IT  
+- Sales  
+
+![File Share](screenshots/file_share.png)  
+
 ---
 
+## NTFS Permissions  
 
+Permissions are managed through Active Directory Security Groups.  
+
+IT folder:  
+- IT_Admins group  
+
+Sales folder:  
+- Sales_Users group  
+
+![IT Permissions](screenshots/it_permissions.png)  
+
+![Sales Permissions](screenshots/sales_permissions.png)   
+
+---
+
+## Author
+Georgios Konstantopoulos
