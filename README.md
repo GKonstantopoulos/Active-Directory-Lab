@@ -1,6 +1,17 @@
 # Active Directory Home Lab  
 
-## Overview  
+## Overview   
+
+## Lab Architecture
+
+Windows Server 2022
+|
+|
+lab.local Domain
+|
+
+| |
+WIN11 Client File Server  
 
 A Windows Server 2022 Active Directory lab environment with centralized authentication,  
 DHCP, DNS, file services, NTFS permissions and Group Policy management.
@@ -45,16 +56,18 @@ Configured:
 - Security Groups
 - Organizational Units
 
-Users:  
+## User Access Model
 
-IT_Admins Group:  
-georgepap  
+Security groups were used to manage access.
 
-Sales_Users Group:  
-mariakon  
+IT_Admins:
+- georgepap
 
-Domain Users only:  
-johnmarkou  
+Sales_Users:
+- mariakon
+
+Domain Users:
+- johnmarkou (test user) 
 
 ![Active Directory Users](screenshots/john_IT_access_denied.png.png)  
 ![Active Directory Users](screenshots/john_sales_access_denied.png.png)
@@ -98,15 +111,17 @@ Screenshot:
 ![DNS Records](screenshots/dns_records.png)  
 
 ---  
-## File Server Configuration  
+## File Server Configuration
 
-Created SMB share:  
+Configured SMB file sharing with department-based access control.
 
-\\SRV-DC-01\CompanyData  
+Share:
 
-Folders:  
-- IT  
-- Sales  
+\\SRV-DC-01\CompanyData
+
+Folders:
+- IT
+- Sales
 
 ![File Share](screenshots/file_share.png)  
 
