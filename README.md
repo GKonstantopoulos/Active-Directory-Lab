@@ -57,12 +57,12 @@ Domain Users only:
 johnmarkou  
 
 ![Active Directory Users](screenshots/john_IT_access_denied.png.png)  
-![Active Directory Users](screenshots/john_IT_access_denied.png.png)
+![Active Directory Users](screenshots/john_sales_access_denied.png.png)
 
 
 Screenshot:  
 
-![Active Directory Users](screenshots/john_sales_access_denied.png.png)  
+![Active Directory Users](screenshots/ad_users.png)  
 
 ---
 
