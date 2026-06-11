@@ -5,10 +5,9 @@
 A Windows Server 2022 Active Directory lab environment with centralized authentication,  
 DHCP, DNS, file services, NTFS permissions and Group Policy management.
 
-This project demonstrates a small enterprise-style Windows infrastructure with user management, access control 
-and policy-based configuration
+This project demonstrates a small enterprise-style Windows infrastructure with user management,  
+access control and policy-based configuration  
 
-     
 ---  
 ## Environment
 
@@ -55,11 +54,15 @@ Sales_Users Group:
 mariakon  
 
 Domain Users only:  
-johnmarkou
+johnmarkou  
+
+![Active Directory Users](screenshots/john_IT_access_denied.png.png)  
+![Active Directory Users](screenshots/john_IT_access_denied.png.png)
+
 
 Screenshot:  
 
-![Active Directory Users](screenshots/01_ad_users.png)  
+![Active Directory Users](screenshots/john_sales_access_denied.png.png)  
 
 ---
 
@@ -77,9 +80,9 @@ Client receives IP automatically from DHCP.
 
 Screenshots:  
 
-![DHCP Scope](screenshots/03_dhcp_scope.png)  
+![DHCP Scope](screenshots/dhcp_scope.png)  
 
-![DHCP Lease](screenshots/04_dhcp_lease.png)  
+![DHCP Lease](screenshots/dhcp_lease.png)  
 
 ---
 
@@ -92,11 +95,8 @@ WIN11-CLIENT-01
 
 Screenshot:  
 
-![DNS Records](screenshots/05_dns.png)  
+![DNS Records](screenshots/dns_records.png)  
 
 ---
 
-# File Server   
-Created SMB share:  
 
-``` Structure: ``` CompanyData ├── IT └── Sales ``` Screenshot: ![File Share](screenshots/06_file_share.png) --- # NTFS Permissions Access is controlled using Security Groups. ## IT Folder Permissions: ``` SYSTEM Administrators IT_Admins ``` Screenshot: ![IT Permissions](screenshots/07_it_permissions.png) ## Sales Folder Permissions: ``` SYSTEM Administrators Sales_Users ``` Screenshot: ![Sales Permissions](screenshots/08_sales_permissions.png) --- # Group Policy Management Created Group Policies for automatic network drive mapping. ## Sales Users Mapped: ``` S: \\SRV-DC-01\CompanyData\Sales ``` Applied to: ``` Sales_Users ``` Screenshot: ![Sales Drive Mapping](screenshots/09_gpo_sales_drive.png) ## IT Users Mapped: ``` I: \\SRV-DC-01\CompanyData\IT ``` Applied to: ``` IT_Admins ``` Screenshot: ![IT Drive Mapping](screenshots/10_gpo_it_drive.png) --- # Access Testing Validation performed from Windows 11 client. ## georgepap Member of: ``` IT_Admins ``` Result: ``` I: IT drive available Sales access denied ``` Screenshot: ![George IT Drive](screenshots/11_george_it_drive.png) --- ## mariakon Member of: ``` Sales_Users ``` Result: ``` S: Sales drive available IT access denied ``` Screenshot: ![Maria Sales Drive](screenshots/12_maria_sales_drive.png) --- ## johnmarkou Member of: ``` Domain Users only ``` Security test: - No mapped drives - No access to IT share - No access to Sales share Screenshots: ![John No Drives](screenshots/13_john_no_drives.png) ![John Access Denied](screenshots/14_john_access_denied.png) --- # Skills Demonstrated - Windows Server Administration - Active Directory - DNS - DHCP - SMB File Sharing - NTFS Permissions - Group Policy Objects - User and Group Management - Troubleshooting Network Connectivity ```
